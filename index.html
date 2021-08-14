@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      --pale-blue: hsl(225, 100%, 94%);
+      --bright-blue: hsl(245, 75%, 52%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+    }
+
+    @media only screen and (min-width: 0px) {
+      body {
+        background-image: url(./images/pattern-background-mobile.svg)
+      }
+
+      .order-container {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      body {
+        background-image: url(./images/pattern-background-desktop.svg);
+      }
+
+      .order-container {
+        margin-left: 35%;
+        margin-right: 35%;
+      }
+    }
+
+    body, html {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 16px;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    body {
+      background-color: var(--pale-blue);
+      background-size: 100%;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      font-weight: 900;
+      margin-top: 10%;
+      margin-bottom: 5%;
+      font-size: 1.75em;
+    }
+
+    .order-container {
+      background: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 5%;
+    }
+
+    .hero-image {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .attribution {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .button-solid {
+      background-color: var(--bright-blue);
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      padding: 15px 32px;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 10px 7px 2px var(--pale-blue);
+    }
+
+    .order-cancel {
+      color: var(--desaturated-blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .plan-container {
+      background: var(--very-pale-blue);
+      margin-top: 10%;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 3%;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .plan-text {
+      float: left;
+      margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .annual-plan {
+      color: var(--dark-blue);
+      font-weight: 900;
+      display: block;
+    }
+
+    .music-svg {
+      float: left;
+    }
+
+    .plan-change {
+      float: right;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      font-weight: 700;
+    }
+
+    .price-text {
+      color: var(--desaturated-blue);
+    }
+
+    .summary-text {
+      color: var(--desaturated-blue);
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="order-container">
+    <img class="hero-image" aria-hidden="true" src="./images/illustration-hero.svg" alt="">
+
+    <h1>Order Summary</h1>
+
+    <span class="summary-text">You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!</span>
+
+    <div class="plan-container">
+      <img class="music-svg" aria-hidden="true" src="./images/icon-music.svg">
+      <div class="plan-text">
+        <span class="annual-plan">Annual Plan</span>
+        <span class="price-text">$59.99/year</span>
+      </div>
+      <a href="" class="plan-change">Change</a>
+    </div>
+
+    <a href="" class="button-solid">Proceed to Payment</a>
+    <a href="" class="order-cancel">Cancel Order</a>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://rufflehuffle.github.io/">Brandon Nguyen</a>.
+  </div>
+</body>
+</html>
